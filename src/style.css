@@ -75,9 +75,24 @@ main {
   line-height: 20px;
 }
 .weather-details strong {
-  color: #ffffff;
+  color: #245c7d;
 }
 
+.week-forecast {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+}   
+.weather-day {
+    font-size: 16px;
+    opacity: 0.6;
+}
+.weather-f-l {
+opacity: 0.6;
+}
+.weather-f-temp {
+    font-size: 12px;
+}
 .forecast-details {
   list-style-type: none;
   padding-left: 0;
@@ -109,4 +124,7 @@ footer {
   text-align: center;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.7);
+}
+a {
+   color: #245c7d; 
 }
