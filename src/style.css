@@ -1,0 +1,112 @@
+body {
+  background-color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+a {
+  color: black;
+}
+.weather-app {
+  background-color: #848484;
+
+  max-width: 390px;
+
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+.search-bar {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 77%;
+  padding: 10px 15px;
+}
+.search-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  color: #ffffff;
+  border-radius: 5px;
+  width: 20%;
+  padding: 10px 10px;
+  margin-left: 5px;
+}
+.search-form {
+  margin: 20px auto;
+}
+main {
+  padding: 20px 0;
+}
+.weather-today-details {
+  text-align: center;
+  color: #ffffff;
+}
+.weather-city {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.main-weather {
+  display: flex;
+  justify-content: center;
+}
+.main-weather-icon {
+  width: 60px;
+  height: 60px;
+  margin-top: 13px;
+}
+.temp-unit {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.weather-temperature {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.weather-details {
+  font-size: 12px;
+  line-height: 20px;
+}
+.weather-details strong {
+  color: #ffffff;
+}
+
+.forecast-details {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.day-of-week {
+  font-size: 12px;
+  text-align: center;
+  color: #ffffff;
+}
+.hour-temp {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+}
+.weather-icon {
+  font-size: 30px;
+  background-color: #f0efef;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin: 20px auto;
+}
+.weeks-forecast-details {
+  list-style-type: none;
+}
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+}

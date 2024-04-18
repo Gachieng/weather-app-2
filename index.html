@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-bar"
+            id="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-today-details">
+          <h1 class="weather-city" id="city"></h1>
+          <div class="main-weather">
+            <div id="icon"></div>
+            <div class="weather-temperature" id="temp"></div>
+            <div class="temp-unit">°c</div>
+          </div>
+          <div>
+            <p class="weather-details">
+              <span id="time">Monday 15:01,</span>
+              <span id="weather-description"></span>
+              <br />
+              Humidity <strong id="humidity"></strong> Wind
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+        </div>
+       <!-- <div class="todays-forecast">
+          <ul class="forecast-details">
+            <li>
+              <div class="day-of-week">Mon</div>
+              <div class="weather-icon">☁️</div>
+              <div class="hour-temp">12°C</div>
+            </li>
+            <li>
+              <div class="day-of-week">Tue</div>
+              <div class="weather-icon">☁️</div>
+              <div class="hour-temp">16°C</div>
+            </li>
+            <li>
+              <div class="day-of-week">Wed</div>
+              <div class="weather-icon">⛅️</div>
+              <div class="hour-temp">20°C</div>
+            </li>
+            <li>
+              <div class="day-of-week">Thu</div>
+              <div class="weather-icon">🌤️</div>
+              <div class="hour-temp">24°C</div>
+            </li>
+            <li>
+              <div class="day-of-week">Fri</div>
+              <div class="weather-icon">⛅️</div>
+              <div class="hour-temp">24°C</div>
+            </li>
+            <li>
+              <div class="day-of-week">Sat</div>
+              <div class="weather-icon">☁️</div>
+              <div class="hour-temp">12°C</div>
+            </li>
+          </ul>
+        </div> -->
+        <!-- <div class="this-weeks-forecast">
+          <p>This week</p>
+          <ul class="weeks-forecast-details">
+            <li>Sun Mostly cloudy ☁️ H 20°C L 12°C</li>
+            <li>Mon Mostluy sunny ☀️ H 25°C L 12°C</li>
+            <li>Tue Cloudy ☁️ H 18°C L 12°C</li>
+            <li>Wed Rainy 🌧️ H 14°C L 12°C</li>
+            <li>Thu Mostly cloudy ☁️ H 20°C L 12°C</li>
+            <li>Fri Mostly cloudy ☁️ H 20°C L 12°C</li>
+          </ul>
+        </div>
+      --></main>
+      <footer>
+        Built by
+        <a href="https://github.com/Gachieng" target="_blank">Georgina A</a> ,
+        is open-sourced on
+        <a
+          href="https://github.com/Gachieng/Weather-forecast-app"
+          target="_blank"
+          >Github</a
+        >
+        and hosted on
+        <a href="https://weather-app-424.netlify.app" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
