@@ -75,7 +75,7 @@ main {
   line-height: 20px;
 }
 .weather-details strong {
-  color: #245c7d;
+  color: #42b4f6;
 }
 
 .week-forecast {
@@ -95,20 +95,24 @@ main {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
+  
 }
 #forecast-js {
  display: flex;
  justify-content: space-around;
+ 
 }
 
 .weather-forecast-icon {
-    font-size: 30px;
+    width: 40px;
+    height: 40px;
   background-color: rgba(255, 255, 255,0.5);
-  border-radius: 10px;
-  padding: 5px 5px;
+  border-radius: 6px;
+  
  display: block;
  margin: 0 auto;
  margin-top: 10px;
+
 }
 .weather-forecast-date {
     font-size: 14px;

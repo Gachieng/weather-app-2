@@ -15,6 +15,7 @@ function updateWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
   temperatureElement.innerHTML = Math.round(temp);
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -29,6 +30,7 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -45,33 +47,50 @@ function submitResults(event) {
 
   searchCity(searchInput.value);
 }
-function displayForecast() {
-    
 
-let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+function getForecast(city) {
+  let apiKey = "a1e340cfbbe150t0d4o3f1d4bdda2ac8";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric}`;
+  axios(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
 let forecastHtml = "";
-days.forEach(function(day){
-forecastHtml =
-  forecastHtml +
-  `
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
  <div class="weather-forecast-day">
-            <div class="weather-forecast-date">${day}</div>
-            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-date">${formatDay(day.time)}</div>
+            
+            <img src="${
+              day.condition.icon_url
+            }" class="weather-forecast-icon" />
+            
             <div class="weather-forecast-temperatures">
               <div class="weather-forecast-temperature-high">
-                12º
+                ${Math.round(day.temperature.maximum - 273.15)}°
               </div>
-              <div class="weather-forecast-temperature-low">9º</div>
+              <div class="weather-forecast-temperature-low">${Math.round(
+                day.temperature.minimum - 273.15
+              )}°</div>
             </div>
           </div>
 
 `;
-});
-let forecastElement = document.querySelector("#forecast-js");
-forecastElement.innerHTML = forecastHtml;
+    }
+  });
+  let forecastElement = document.querySelector("#forecast-js");
+  forecastElement.innerHTML = forecastHtml;
 }
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", submitResults);
 
 searchCity("Nairobi");
-displayForecast();
+
